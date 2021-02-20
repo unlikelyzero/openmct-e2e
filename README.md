@@ -1,3 +1,5 @@
+[![telemetry-client](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/mxo83i/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/mxo83i/runs)
+
 # Open MCT telemetry client e2e tests
 
 This repo contains two tests which automatically verify the functionality for the [telemetry-client](https://github.com/shefalijoshi/telemetry-client) and [openmct-tutorial](https://github.com/nasa/openmct-tutorial.git) applications.
