@@ -22,6 +22,7 @@ jobs:
 
       - name: Run a one-line script
         run: |
+          cd openmct-tutorial
           npm install
           npm start &
   telemetry-client:
