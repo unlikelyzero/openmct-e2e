@@ -11,31 +11,24 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   openmct-tutorial:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       - uses: actions/checkout@v2
         with:
           repository: nasa/openmct-tutorial
 
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
           npm install
-          npm start
+          npm start &
   telemetry-client:
-    # The type of runner that the job will run on
+
     runs-on: ubuntu-latest
     needs: [openmct-tutorial]
-      
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       - uses: actions/checkout@v2
         with:
@@ -48,15 +41,12 @@ jobs:
           npm run build          
 
   e2e-tests:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     needs: [openmct-tutorial, telemetry-client]
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
       - uses: actions/checkout@v2
 
-      # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
           npm install
