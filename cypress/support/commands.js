@@ -24,12 +24,15 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+import { expect } from 'chai'
 import moment from 'moment'
 
+//The intent of this function is to verify that the first and last value of the table are
+// expectedMinutes apart.
 Cypress.Commands.add('checkTableFirstAndLastValue', (exptectedMinutes) => {
     cy.get('[class="content-body"]').then((tbody) => {
-        const first_record = tbody.find('tr:first>td').eq(1)
-        const last_record = tbody.find('tr:last>td').eq(1)
+        const first_record = tbody.find('tr:first>td').eq(1) //TODO optimize
+        const last_record = tbody.find('tr:last>td').eq(1)  //TODO optimize
         
         cy.log('Verify Table Timestample values')
         const first_timestamp = moment(first_record[0].innerText) //i.e. "2021-02-20T03:32:48.749Z"
@@ -40,5 +43,16 @@ Cypress.Commands.add('checkTableFirstAndLastValue', (exptectedMinutes) => {
         const duration = Math.round(first_timestamp.diff(last_timestamp,"minutes",true))
         cy.log(duration + ' minutes between first and last Timestamp')
         expect(duration).to.deep.equal(exptectedMinutes)
+    })
+})
+
+//The intent of this function is to verify that the table exists but is missing values
+Cypress.Commands.add('verifyEmptyTable', () => {
+    cy.get('[class="content-body"]').then((tbody) => {
+        const first_record = tbody.find('tr:first>td').eq(1) //TODO optimize
+        const last_record = tbody.find('tr:last>td').eq(1)  //TODO optimize
+        expect(first_record.length).to.eq(0)
+        expect(last_record.length).to.eq(0)
+        cy.log('Verified Empty Table Timestamp values')  
     })
 })

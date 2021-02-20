@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cypress": "cypress open",
-    "cypress:all": "cypress run",
+    "cypress:all": "cypress run --browser chrome",
     "cypress:gha": "cypress run",
     "headless": "cypress run --browser chrome --headless",
     "lint": "eslint '*.js' '**/*.js'",
