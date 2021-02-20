@@ -19,6 +19,7 @@ jobs:
       - uses: actions/checkout@v2
         with:
           repository: nasa/openmct-tutorial
+          path: openmct-tutorial
           
       - name: Cache node modules
         uses: actions/cache@v2.1.4
@@ -32,15 +33,18 @@ jobs:
             
       - name: Start openmct-tutorial application
         run: |
+          cd openmct-tutorial
           npm install
           npm start &     
    
       - uses: actions/checkout@v2
         with:
           repository: shefalijoshi/telemetry-client
+          path: telemetry-client
 
       - name: Start telemetry-client application and healthcheck
         run: |
+          cd telemetry-client
           npm install
           npm run build &
           sleep 10 &&
