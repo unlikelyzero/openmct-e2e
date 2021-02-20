@@ -33,6 +33,8 @@ jobs:
   telemetry-client:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    needs: [openmct-tutorial]
+      
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
@@ -50,6 +52,7 @@ jobs:
   e2e-tests:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
+    needs: [openmct-tutorial, telemetry-client]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:    
