@@ -27,7 +27,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          cd openmct-tutorial
           npm install
           npm start
   telemetry-client:
@@ -45,7 +44,6 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: |
-          cd telemetry-client
           npm install
           npm run build          
 
