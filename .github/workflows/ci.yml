@@ -35,7 +35,7 @@ jobs:
         run: |
           cd openmct-tutorial
           npm install
-          npm start &     
+          npm start &> openmct-tutorial.output.txt 
    
       - uses: actions/checkout@v2
         with:
@@ -46,9 +46,7 @@ jobs:
         run: |
           cd telemetry-client
           npm install
-          npm run build &
-          sleep 10 &&
-          curl http://localhost:3000
+          npm run build &> telemetry-client.output.txt
    
       - uses: actions/checkout@v2
 
@@ -64,3 +62,10 @@ jobs:
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: upload artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: output
+          path: |
+            telemetry-client/*.output.txt
+            openmct-tutorial/*.output.txt
