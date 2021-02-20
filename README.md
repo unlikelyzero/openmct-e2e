@@ -1,4 +1,4 @@
-[![telemetry-client](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/mxo83i/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/mxo83i/runs)
+[![telemetry-client](https://img.shields.io/endpoint?url=https://dashboard.cypress.io/badge/detailed/mxo83i/main&style=flat&logo=cypress)](https://dashboard.cypress.io/projects/mxo83i/runs) [![CI](https://github.com/unlikelyzero/openmct-e2e/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/unlikelyzero/openmct-e2e/actions/workflows/ci.yml)
 
 # Open MCT telemetry client e2e tests
 
