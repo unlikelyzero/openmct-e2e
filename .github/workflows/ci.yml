@@ -54,3 +54,7 @@ jobs:
             wait-on: 'http://127.0.0.1:3000, http://127.0.0.1:8080/history'
             # wait for 2 minutes for the server to respond
             wait-on-timeout: 120
+            record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
