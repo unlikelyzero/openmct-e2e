@@ -12,7 +12,7 @@ import moment from 'moment'
 
 describe('OPENMCT-1', () => {
   
-    it('Application recieves 15 minutes of historical telemetry data from server and renders data on table', () => {
+    it('Application reccives 15 minutes of historical telemetry data from server and renders data on table', () => {
         cy.intercept('GET', '/sockjs-node/info?t=**').as('loaded')
         cy.intercept({
             pathname: '/history/pwr.v',
@@ -128,3 +128,4 @@ describe('OPENMCT-1', () => {
 
     })
 })
+
