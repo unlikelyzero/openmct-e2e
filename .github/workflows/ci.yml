@@ -35,7 +35,7 @@ jobs:
         run: |
           cd openmct-tutorial
           npm install
-          npm start &> openmct-tutorial.output.txt 
+          npm start &> openmct-tutorial.output.txt &
    
       - uses: actions/checkout@v2
         with:
@@ -46,7 +46,7 @@ jobs:
         run: |
           cd telemetry-client
           npm install
-          npm run build &> telemetry-client.output.txt
+          npm run build &> telemetry-client.output.txt &
    
       - uses: actions/checkout@v2
 
