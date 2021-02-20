@@ -48,13 +48,14 @@ jobs:
    
       - uses: actions/checkout@v2
 
-      - name: Cypress run (currently broken)
+      - name: Cypress run with Dashboard
         uses: cypress-io/github-action@v2
         with:
-            wait-on: 'http://127.0.0.1:3000, http://127.0.0.1:8080/history'
+            wait-on: 'http://127.0.0.1:3000'
             # wait for 2 minutes for the server to respond
             wait-on-timeout: 120
             record: true
+            config: baseUrl=http://127.0.0.1:3000
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
