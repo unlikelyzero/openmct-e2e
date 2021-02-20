@@ -1,0 +1,18 @@
+
+{
+    "plugins": [
+      "cypress",
+      "prettier",
+      "mocha"
+    ],
+    "env": {
+      "cypress/globals": true
+    },
+    "extends": [
+      "plugin:prettier/recommended",
+      "plugin:cypress/recommended"
+    ],
+    "rules": {
+      "mocha/no-exclusive-tests": "error"
+    }
+  }

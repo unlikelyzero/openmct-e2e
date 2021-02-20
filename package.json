@@ -1,0 +1,42 @@
+{
+  "name": "openmct-e2e",
+  "version": "0.0.1",
+  "description": "e2e tests for the openmct telemetry software",
+  "main": "index.js",
+  "scripts": {
+    "cypress": "cypress open",
+    "cypress:all": "cypress run",
+    "cypress:gha": "cypress run",
+    "headless": "cypress run --browser chrome --headless",
+    "lint": "eslint '*.js' '**/*.js'",
+    "lint-fix": "eslint --ext .js . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unlikelyzero/openmct-e2e.git"
+  },
+  "keywords": [
+    "e2e",
+    "test",
+    "es6",
+    "cypress"
+  ],
+  "author": "John Hill",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/unlikelyzero/openmct-e2e/issues"
+  },
+  "homepage": "https://github.com/unlikelyzero/openmct-e2e#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-cypress": "^2.11.2",
+    "eslint-plugin-prettier": "3.3.1",
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@lensesio/cypress-websocket-testing": "^1.0.1",
+    "cypress": "^6.5.0",
+    "moment": "^2.29.1"
+  }
+}

@@ -1,0 +1,22 @@
+{
+    "baseUrl": "http://localhost:3000",
+    "experimentalFetchPolyfill": true,
+    "defaultCommandTimeout": 30000,
+    "responseTimeout": 60000,
+    "video": false,
+    "videoUploadOnPasses": false,
+    "watchForFileChanges": true,
+    "pageLoadTimeout": 60000,
+    "viewPortHeight": 768,
+    "viewportWidth": 1024,
+    "chromeWebSecurity": false,
+    "reporter": "junit",
+    "reporterOptions": {
+      "mochaFile": "results/cypress-report-[hash].xml",
+      "toConsole": true
+    },
+    "retries": {
+      "runMode": 1,
+      "openMode": 0
+    }
+  }
