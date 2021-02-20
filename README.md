@@ -1,6 +1,6 @@
 # Open MCT telemetry client e2e tests
 
-These automated test verify acceptance criteria for the [telemetry-client](https://github.com/shefalijoshi/telemetry-client) and [openmct-tutorial](https://github.com/nasa/openmct-tutorial.git) applications.
+This repo contains two tests which automatically verify some acceptance criteria for the [telemetry-client](https://github.com/shefalijoshi/telemetry-client) and [openmct-tutorial](https://github.com/nasa/openmct-tutorial.git) applications.
 
 ## Prerequisites
 
@@ -14,8 +14,8 @@ git clone https://github.com/unlikelyzero/openmct-e2e.git
 npm install
 ```
 
-At this point, you can decide whether you want to run all the tests at once headlessly, or run the
-tests with the Cypress GUI Playground.
+After this test repo is installed, you can decide whether you want to run all the tests at once headlessly, 
+or run the tests with the Cypress GUI Playground.
 
 ## Headless
 
