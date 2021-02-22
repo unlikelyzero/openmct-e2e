@@ -32,7 +32,9 @@ npm run headless
 ```
 npm run cypress
 ```
-
+This will launch the GUI Playground and allow you to select the testsuite (Or all testsuites) to run.
+After launching a test, you can watch the test run interactively with DOM Snapshotting. After the test completes,
+you can go back in time to see Cypress's view into the browser and webapp.
 
 ## Reports
 
